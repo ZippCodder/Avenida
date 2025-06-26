@@ -1,0 +1,155 @@
+
+.pricing {
+ width: 100%;
+ height: max-content;
+ display: block; 
+}
+
+@keyframes fade-in {
+ from {
+  opacity: 0; 
+ }
+ to {
+  opacity: 1;
+ }
+} 
+
+.pricing__options {
+ width: max-content; 
+ height: max-content; 
+ position: relative;
+ display: block;
+ margin: auto; 
+ padding: 2em;
+ padding-left: 5%; 
+ padding-right: 5%;
+ overflow: hidden;
+ background: rgba(255, 255, 255, 0.5); 
+ border-radius: 2em;
+ box-sizing: border-box; 
+ animation: fade-in 0.5s ease-in;
+ white-space: wrap; 
+ margin-top: 7rem;
+}
+
+.pricing__heading {
+ color: var(--blue-1);
+ font-size: 2.5em;
+ margin-top: 0;
+ text-align: center; 
+}
+
+.pricing__subtext {
+ color: var(--dark-gray);
+ text-align: center; 
+}
+
+.pricing__option {
+ width: max-content;
+ padding: 2em;
+ padding-top: 6em; 
+ border-radius: 1em;
+ text-align: center; 
+ box-shadow: 0px 0px 2px var(--blue-1);
+ background: white;
+ text-align: center; 
+ display: inline-block;
+ margin-left: 0.5em; 
+ margin-right: 0.5em; 
+ background-image: url("/public/images/graphics/centro-pattern-transparent.png");
+ background-size: contain;
+ background-position: center top;
+ background-repeat: no-repeat;
+}
+
+.pricing__subheading {
+ font-size: 1.5em; 
+ color: black;
+ margin-bottom: 0em; 
+ margin-top: 0.5em; 
+}
+
+.pricing__icon {
+ color: var(--blue-1); 
+ font-size: 5em;
+ margin-bottom: 0; 
+ margin-top: 0; 
+}
+
+.pricing__price {
+ font-size: 3em;
+ width: max-content; 
+ display: block; 
+ margin: auto; 
+ margin-top: 0.5em;
+ opacity: 0.7;
+ border-top: 1px solid var(--blue-1);
+
+  & small {
+   font-size: 0.3em; 
+  }
+}
+
+.pricing__features {
+ text-align: left;
+ padding: 2em; 
+ background-color: radial-gradient(#c6c6c6, #c6c6c6, #c6c6c6, gray, gray);
+ margin-top: 1em; 
+ font-size: 0.8em; 
+
+  & p {
+   margin-bottom: 0.5em;
+   text-decoration: none;
+   color: var(--dark-gray);
+
+    & i {
+     font-size: 1.2em; 
+     margin-right: 1em; 
+     color: var(--green-1);
+    }
+  }
+}
+
+.pricing__checkout {
+   display: block;
+   width: 100%; 
+   padding: 1em;  
+   background-color: var(--blue-1);
+   border: none; 
+   padding: 1em;
+   padding-left: 2em; 
+   padding-right: 2em;
+   color: white; 
+   font-family: var(--main-font);
+   border-radius: 1em;
+   margin-top: 1em; 
+   transition: background-color 0.3s ease; 
+}
+
+  .pricing__checkout:hover {
+   background-color: var(--dark-blue);
+  }
+ 
+@media all and (max-width: 1350px) {
+ .pricing__option {
+  display: block;
+  padding-left: 15%; 
+  padding-right: 15%; 
+  margin: auto; 
+  margin-bottom: 2em; 
+ }
+
+ .pricing__options {
+  width: auto; 
+ }
+
+  @media (max-width: 500px) {
+   .pricing__option {
+    padding: 2em; 
+   }
+
+   .pricing__options {
+    width: 100%; 
+   }
+  }
+}

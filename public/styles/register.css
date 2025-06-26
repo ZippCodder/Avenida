@@ -1,0 +1,197 @@
+
+.register {
+ width: 100%; 
+ min-height: 50vh;
+ display: block; 
+ margin-top: 7em;
+ box-sizing: border-box;
+}
+
+@keyframes fade-in {
+ from {
+  opacity: 0; 
+ }
+ to {
+  opacity: 1;
+ }
+} 
+
+.register__form {
+ width: max-content; 
+ height: content; 
+ display: block; 
+ margin: auto; 
+ padding: 2em;
+ padding-left: 5%; 
+ padding-right: 5%;
+ overflow: hidden;
+ background: white; 
+ border-radius: 2em;
+ animation: fade-in 0.5s ease-in;
+
+  & legend {
+   color: var(--blue-1);
+   margin-bottom: 1em; 
+  }
+
+  & button[type="submit"] {
+   display: block;
+   margin: auto; 
+   padding: 1em;  
+   background-color: var(--blue-1);
+   border: none; 
+   padding: 1em;
+   padding-left: 2em; 
+   padding-right: 2em;
+   color: white; 
+   font-family: var(--main-font);
+   border-radius: 1em;
+   margin-top: 1em; 
+   transition: background-color 0.3s ease; 
+  }
+
+  & button[type="submit"]:hover {
+   background-color: var(--dark-blue);
+  }
+}
+
+.register__input {
+ border: none;
+ width: auto;
+ box-sizing: border-box;
+ margin-bottom: 1em; 
+ margin-left: 1em; 
+ box-shadow: 0px 0px 2px gray;
+ border-radius: 1em;
+ font-size: var(--main-font);
+ padding: 1em;
+ font-size: 0.8em;
+ font-family: var(--main-font);
+ display: inline-block;
+ grid-row-start: 2;
+ background: white; 
+
+  & input { 
+   border: none; 
+   font-family: var(--main-font);
+   outline: none; 
+   background: white; 
+  }
+
+  & i {
+   font-size: 1.3em;
+   opacity: 0.4;
+   vertical-align: middle; 
+  }
+}
+
+.register__input[name="email"] {
+ display: block;
+ width: calc(100% - 1em); 
+  
+  & input {
+   width: calc(100% - 1.6em);
+  }
+}
+
+.register__feildset {
+  display: grid;
+  grid-template-columns: 1fr 1fr; 
+  grid-template-rows: auto auto; 
+  width: 100%;
+  white-space: nowrap; 
+}
+
+.register__heading {
+ color: var(--blue-1);
+ font-size: 2.5em;
+ margin-top: 0;
+ text-align: center; 
+}
+
+.register__image {
+ background-image: url("/public/images/photos/students.png");
+ width: 100%; 
+ height: 100%;
+ background-color: red; 
+ border-radius: 2em;
+ border-top-left-radius: 0px; 
+ border-bottom-left-radius: 0px; 
+ background-size: cover;
+ background-position: center center; 
+ background-repeat: no-repeat;
+ filter: brightness(60%);
+}
+
+.register__tos {
+ color: var(--dark-gray);
+ font-size: 0.8em;
+ text-align: center; 
+
+  & input {
+    background-color: var(--blue-1);
+    width: 1.5em; 
+    height: 1.5em;
+    vertical-align: middle; 
+    margin-right: 1em;
+  }
+}
+
+.register__password-details {
+ width: 100%;
+ display: block; 
+ margin: auto; 
+ border-radius: 1em;
+ background-color: var(--blue-3);
+ color: var(--blue-1);
+ padding-top: 0.5em; 
+ padding-bottom: 0.5em;
+ margin-bottom: 1em;
+ font-size: 0.8em; 
+}
+
+.register__success {
+ width: max-content; 
+ padding: 2em; 
+ background: white; 
+ border-radius: 2em;
+ text-align: center; 
+ display: block; 
+ margin: auto; 
+ padding-top: 8em; 
+ background-image: url("/public/images/graphics/centro-pattern-transparent.png");
+ background-size: contain;
+ background-position: center top;
+ background-repeat: no-repeat;
+ box-sizing: border-box; 
+
+  & i {
+   font-size: 4em; 
+   color: var(--green-1);
+  }
+}
+
+.register__success-heading {
+ font-size: 2em;
+ margin-bottom: 0.5em;
+}
+
+.register__success-message {
+ color: var(--dark-gray);
+ font-size: 0.8em; 
+}
+
+@media all and (max-width: 580px) {
+ .register__input {
+  display: block; 
+  width: calc(100% - 1em); 
+
+  & input {
+   width: calc(100% - 1.6em);
+  }
+ }
+
+ .register__feildset {
+  display: block; 
+ }
+}
