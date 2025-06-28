@@ -7,7 +7,7 @@ export default function Header() {
 return (
   <>
    <header className="header">
-     <img className="header__logo" src="/public/images/icons/centro-website-logo.png"/>
+     <img className="header__logo" src="/public/images/icons/centro-website-logo.png" onClick={() => window.location= "/"}/>
      <h2 className="header__subtitle">JOB SERVICES</h2>
     <nav className="header__nav">
      <a className="nav__link" href="/">Home</a>
