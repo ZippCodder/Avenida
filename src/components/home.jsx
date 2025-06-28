@@ -19,6 +19,8 @@ const backgroundImages = React.createRef(null);
 const phoneDisplay = React.createRef(null);
 const aboutBackground  = React.useRef(null);
 
+const jacob = 
+
 React.useEffect(() => {
   window.addEventListener('scroll', () => {
    backgroundImages.current.style.top = `${-(window.pageYOffset/20)}%`;
