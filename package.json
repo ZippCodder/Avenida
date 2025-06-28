@@ -1,7 +1,7 @@
 {
   "scripts": {
     "start:dev": "PORT=5000 MODE=development node --env-file=.env server.js",
-    "start:prod": "PORT=80 MODE=production node --env-file=.env server.js",
+    "start:prod": "PORT=80 MODE=development node --env-file=.env server.js",
     "build:dev": "webpack --mode=development",
     "build:prod": "webpack --mode=production",
     "serve": "webpack serve",
