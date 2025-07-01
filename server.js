@@ -12,8 +12,17 @@ const usersCollection = database.collection("Users");
 const protocol = (process.env.MODE === "development") ? http:https;
 const server = protocol.createServer((process.env.MODE === "production") ? {key: fs.readFileSync(process.env.KEY_PATH), cert: fs.readFileSync(process.env.CERT_PATH)}:undefined);
 
+function log(msg) {
+ try {
+  fs.appendFileSync(__dirname + "/logs", "\n" + msg);
+ } catch (err) {
+   console.log(err);
+ }
+}
+
 const handlers = {
  "/": function(req, res) {      
+ log(`request made on / from ${req.socket.localAddress} ` + Date(Date.now()).toString());
   try {
    file = fs.readFileSync(__dirname + "/public/pages/index.html", "utf-8").replace("{title}", "Centro: Apply to hundreds of jobs on auto-pilot!").replace("{bundle}", "/dist/home.bundle.js");
   } catch (err) {
@@ -25,7 +34,8 @@ const handlers = {
   res.statusCode = 200;
   res.end(file);
  }, 
- "/register": function(req, res) {   
+ "/register": function(req, res) {  
+ log(`request made on /register from ${req.socket.localAddress} ` + Date(Date.now()).toString());
   if (req.method === "GET") {
    try {
     file = fs.readFileSync(__dirname + "/public/pages/index.html", "utf-8").replace("{title}", "Centro: Register").replace("{bundle}", "/dist/register.bundle.js");
@@ -49,6 +59,7 @@ const handlers = {
   }
  },
  "/pricing": function(req, res) {      
+ log(`request made on /pricing from ${req.socket.localAddress} ` + Date(Date.now()).toString());
   try {
    file = fs.readFileSync(__dirname + "/public/pages/index.html", "utf-8").replace("{title}", "Centro: Pricing").replace("{bundle}", "/dist/pricing.bundle.js");
   } catch (err) {
@@ -78,6 +89,8 @@ server.on("request",(req,res) => {
  });
 
  req.on("end", (data) => {
+
+ try {
  if (data) body += data.toString();
  if (body) req.body = JSON.parse(body);
 
@@ -91,7 +104,7 @@ server.on("request",(req,res) => {
  try {
   file = fs.readFileSync(__dirname + req.url);
  } catch (err) {
-  console.log(err);
+  log(err)
   res.statusCode = 404;
   res.end("file not found!");
   return 
@@ -124,10 +137,13 @@ server.on("request",(req,res) => {
  res.setHeader("Content-Type",contentType);
  res.statusCode = 200;
  res.end(file);
+ } catch (err) {
+ }
  }) 
 });
 
 server.listen(process.env.PORT,function() {
  console.log("Server is active...");
+ log("Server started: " + Date(Date.now()).toString());
 });
 
