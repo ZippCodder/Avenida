@@ -68,6 +68,36 @@ const handlers = {
   res.setHeader("Content-Type", "text/html");
   res.statusCode = 200;
   res.end(file);
+ }, "/cookie-policy": function(req, res) {      
+ log(`request made on /cookie-policy from ${req.socket.localAddress} ` + Date(Date.now()).toString());
+  try {
+   file = fs.readFileSync(__dirname + "/public/pages/index.html", "utf-8").replace("{title}", "Centro: Cookie Policy").replace("{bundle}", "/dist/cookiepolicy.bundle.js");
+  } catch (err) {
+   handlers["404"](req, res, "file not found!");
+  }
+  res.setHeader("Content-Type", "text/html");
+  res.statusCode = 200;
+  res.end(file);
+ }, "/privacy-policy": function(req, res) {      
+ log(`request made on /privacy-policy from ${req.socket.localAddress} ` + Date(Date.now()).toString());
+  try {
+   file = fs.readFileSync(__dirname + "/public/pages/index.html", "utf-8").replace("{title}", "Centro: Privacy Policy").replace("{bundle}", "/dist/privacypolicy.bundle.js");
+  } catch (err) {
+   handlers["404"](req, res, "file not found!");
+  }
+  res.setHeader("Content-Type", "text/html");
+  res.statusCode = 200;
+  res.end(file);
+ }, "/terms-of-service": function(req, res) {      
+ log(`request made on /terms-of-service from ${req.socket.localAddress} ` + Date(Date.now()).toString());
+  try {
+   file = fs.readFileSync(__dirname + "/public/pages/index.html", "utf-8").replace("{title}", "Centro: Terms of Service").replace("{bundle}", "/dist/termsofservice.bundle.js");
+  } catch (err) {
+   handlers["404"](req, res, "file not found!");
+  }
+  res.setHeader("Content-Type", "text/html");
+  res.statusCode = 200;
+  res.end(file);
  },
  "404": function(req, res, message) {
    res.statusCode = 404; 
@@ -121,6 +151,9 @@ server.on("request",(req,res) => {
   break;
   case ".js": {
    contentType = "text/javascript";
+  };
+  case ".ttf": {
+   contentType = "font/ttf";
   };
   break;
   case ".wav": {

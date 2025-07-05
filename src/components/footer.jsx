@@ -11,10 +11,10 @@ export default function Footer(props) {
    <div className="footer__menu">
     <h3>Pages</h3>
     <nav>
-     <a href="">Home</a>
-     <a href="">Pricing</a>
-     <a href="">Register</a>
-     <a href="">My Account</a>
+     <a href="/">Home</a>
+     <a href="/pricing">Pricing</a>
+     <a href="/register">Register</a>
+     <a href="/account">My Account</a>
     </nav>
    </div>
    <div className="footer__menu">
@@ -29,9 +29,9 @@ export default function Footer(props) {
    <div className="footer__menu">
     <h3>More</h3>
     <nav>
-     <a href="">Terms and Conditions</a>
-     <a href="">Privacy Policy</a>
-     <a href="">Cookie Policy</a>
+     <a href="/terms-of-service">Terms of Service</a>
+     <a href="/privacy-policy">Privacy Policy</a>
+     <a href="/cookie-policy">Cookie Policy</a>
     </nav>
    </div>
    <div className="footer__menu">

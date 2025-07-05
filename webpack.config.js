@@ -10,7 +10,10 @@ const config = {
     entry: {
      home: './src/app.jsx',
      register: './src/register.jsx',
-     pricing: './src/pricing.jsx'
+     pricing: './src/pricing.jsx',
+     cookiepolicy: './src/cookiepolicy.jsx',
+     privacypolicy: './src/privacypolicy.jsx',
+     termsofservice: './src/termsofservice.jsx'
     },
     output: {
         path: path.resolve(__dirname, 'dist'),
