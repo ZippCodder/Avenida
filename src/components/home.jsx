@@ -1,25 +1,16 @@
 import React from "react";
 import "../../public/styles/home.css";
 import "../../public/styles/styles.css";
-
-function PhoneDisplay(props) {
- return (
-   <div className="phone-container">
-     <div className={"display__screen phone__content " + props.name}>
-      {props.children}
-     </div>
-     <img className="phone__frame" style={{display: (!props.frame) ? "none":"block"}} src="/public/images/graphics/phone-frame.png"/>
-     </div>
-     );
-}
+import PhoneFrame from "../../public/images/graphics/phone-frame.png";
+import PhoneProfile from "/public/images/photos/jacob.png";
+import Recruiters from "/public/images/photos/recruiters.png";
+import Applicant from "/public/images/photos/applicant.png";
 
 export default function Home() {
 
 const backgroundImages = React.createRef(null);
 const phoneDisplay = React.createRef(null);
 const aboutBackground  = React.useRef(null);
-
-const jacob = 
 
 React.useEffect(() => {
   window.addEventListener('scroll', () => {
@@ -50,7 +41,7 @@ React.useEffect(() => {
        <h2 className="content__title">My Jobs</h2>
        <div>
        <p><i className="fa-solid fa-bell"></i><i className="fa-solid fa-calendar"></i></p>
-        <img src="/public/images/photos/jacob.png" />
+        <img src={PhoneProfile}/>
        </div>
       </div>
       <div className="content__jobs">
@@ -70,7 +61,7 @@ React.useEffect(() => {
       </div>
      </div>
      </div>
-     <img className="phone__frame" src="/public/images/graphics/phone-frame.png"/>
+     <img className="phone__frame" src={PhoneFrame}/>
     </div>
    <article className="main__about">
     <div ref={aboutBackground} className="about__background"></div>
@@ -141,8 +132,8 @@ React.useEffect(() => {
      <button className="for-business__register" onClick={() => window.location = "/pricing"}>Try 1 month!</button>
     </article>
     <div className="for-business__images">
-     <img className="for-business__photo photo-1" src="/public/images/photos/recruiters.png"></img> 
-     <img className="for-business__photo photo-2" src="/public/images/photos/applicant.png"></img> 
+     <img className="for-business__photo photo-1" src={Recruiters}></img> 
+     <img className="for-business__photo photo-2" src={Applicant}></img> 
     </div>
    </section>
    <section className="main__business-benefits">
