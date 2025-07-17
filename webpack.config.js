@@ -10,7 +10,9 @@ const config = {
     entry: {
      home: './src/app.jsx',
      register: './src/register.jsx',
+     login: './src/login.jsx',
      pricing: './src/pricing.jsx',
+     checkout: './src/checkout.jsx',
      cookiepolicy: './src/cookiepolicy.jsx',
      privacypolicy: './src/privacypolicy.jsx',
      termsofservice: './src/termsofservice.jsx'

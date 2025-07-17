@@ -13,7 +13,7 @@ return (
      <a className="nav__link" href="/">Home</a>
      <a className="nav__link" href="/pricing">Pricing</a>
      <a className="nav__link" href="/register">Register</a>
-     <a className="nav__link" href="/register">My Account</a>
+     <a className="nav__link" href="/login">My Account</a>
     </nav>
     <div className="header__dropdown" onClick={() => setMenuOpen(!menuOpen)}>
      <div className="dropdown__dot"></div>  
@@ -23,8 +23,8 @@ return (
       <a className="header__sublink" href="/">Home</a>
       <a className="header__sublink" href="/pricing">Pricing</a>
       <a className="header__sublink" href="/register">Register</a>
-      <a className="header__sublink" href="/register">Login</a>
-      <a className="header__sublink" href="/register">My Account</a>
+      <a className="header__sublink" href="/login">Login</a>
+      <a className="header__sublink" href="/login">My Account</a>
      </nav>
     </div>
    </header>

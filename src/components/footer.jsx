@@ -13,6 +13,7 @@ export default function Footer(props) {
     <nav>
      <a href="/">Home</a>
      <a href="/pricing">Pricing</a>
+     <a href="/login">Login</a>
      <a href="/register">Register</a>
      <a href="/account">My Account</a>
     </nav>
@@ -20,10 +21,10 @@ export default function Footer(props) {
    <div className="footer__menu">
     <h3>Our Services</h3>
     <nav>
-     <p>Applicant Profile Review</p>
+     <p>Virtual Job Application</p>
      <p>Resume and Cover Letter Optimization</p>
      <p>Job Application Tailoring</p>
-     <p>Virtual Job Application</p>
+     <p>Referral Generation</p>
     </nav>
    </div>
    <div className="footer__menu">

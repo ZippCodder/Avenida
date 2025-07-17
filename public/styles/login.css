@@ -1,0 +1,21 @@
+.register {
+ padding-bottom: 10%; 
+}
+
+.register__password-details {
+ text-align: center; 
+}
+
+.login__register-link {
+text-decoration: none; 
+color: var(--blue-1);
+}
+
+.register__input {
+ margin-left: 0;
+ width: 100% !important;
+
+  & input {
+   width: calc(100% - 1.6em);
+  }
+}

@@ -59,7 +59,7 @@ animation: fade-in 0.8s ease-in;
  height: 100%; 
  display: block; 
  margin: auto;
- margin-bottom: 4em;
+ margin-bottom: 2em;
  font-size: 1.2em; 
  text-shadow: 0px 0px 20px white; 
  filter: drop-shadow(0px 0px 20px white);
@@ -298,7 +298,8 @@ top: 0em;
 .intro__buttons {
  width: 70%;
  display: block;
- margin: auto; 
+ margin: auto;
+ margin-top: 2em; 
 }
 
 .buttons__button {
@@ -447,47 +448,44 @@ top: 20%;
   flex-direction: column; 
   text-align: center;
  }
-}
 
-.steps {
- width: 80%; 
- display: block; 
- margin: auto; 
- margin-top: 5%;
- text-align: center;
-
-  & h1 {
-   font-size: 2.5em; 
-   margin-top: 0;
-  }
+ .about__get-started {
+  margin-bottom: 2em; 
+ }
 }
 
 .steps__steps {
  width: max(max-content, 100%); 
- height: content;
+ height: min-content;
  margin: auto; 
- background: rgba(255, 255, 255, 0.5);
  padding: 2em;
  box-sizing: border-box; 
  border-radius: 2em;
+ font-size: 0.8em;
+ margin-top: 2em;
+
+  & div {
+    background: rgba(255, 255, 255, 0.6);
+    box-shadow: 0px 0px 2px var(--green-1);
+    border-radius: 2em;
+    width: max-content;
+    display: block; 
+    margin: auto; 
+  }
 
   & .steps__step {
-    width: content; 
+    width: max-content; 
     height: content;
     display: inline-block; 
-    background: white;
-    padding-top: 1em;
-    padding-bottom: 1em;
     padding-right: 2em;
-    box-sizing: border-box; 
     color: var(--dark-gray);
     text-align: center;
-    border-radius: 2em;
     border-top-right-radius: 0; 
     border-bottom-right-radius: 0; 
     margin: 0;
 
     & mark {
+     display: inline-block;
      margin: 0; 
      padding: 1.4em;  
      color: white;
@@ -496,16 +494,17 @@ top: 20%;
      border-radius: 1em; 
      text-align: center; 
      box-shadow: 0px 0px 2px gray;
+     transform: scale(1.2);
+     clip-path: circle();
     }
   }
 }
 
-@media all and (max-width: 1250px) {
+@media all and (max-width: 780px) {
  .steps__step {
-   display: block; 
+   display: block !important; 
    width: 100%;
    text-align: left !important;
-   margin-bottom: 2em !important;
    border-radius: 2em !important;
    text-overflow: nowrap; 
  }
@@ -515,6 +514,10 @@ top: 20%;
  border-top-right-radius: 2em; 
  border-bottom-right-radius: 2em;
  margin-bottom: 0 !important; 
+}
+
+.steps__step:nth-child(1) mark {
+ transform: scale(1.28);
 }
 
 .about__get-started {
@@ -619,7 +622,7 @@ margin: auto;
 text-align: center;
 justify-content: center;
 grid-gap: 2em;
-margin-top: 5%; 
+margin-top: 5em; 
 }
 
 .user-features__feature {
@@ -872,3 +875,4 @@ margin-top: 5%;
   }
  }
 }
+

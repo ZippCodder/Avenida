@@ -196,3 +196,14 @@
   display: block; 
  }
 }
+
+.register__login-link {
+ color: var(--blue-1);
+ font-size: 0.8em; 
+ width: 100%; 
+ display: block; 
+ margin: auto;
+ text-align: center; 
+ text-decoration: none;
+ margin-bottom: 1em; 
+}

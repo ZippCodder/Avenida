@@ -2,6 +2,7 @@ import React from "react";
 import { createRoot } from "react-dom/client";
 import Header from "./components/header.jsx";
 import Footer from "./components/footer.jsx";
+import Reviews from "./components/reviews.jsx";
 import "../public/styles/styles.css";
 import "../public/styles/register.css";
 
@@ -80,10 +81,12 @@ function App() {
          <li>Passwords must match</li>
         </ul>
       </div>
+      <a href="/login" className="register__login-link">I have an account already!</a>
       <div className="register__tos"><input type="checkbox" name="tos" required></input><label htmlFor="tos">I agree to the Terms of Service and Privacy Policy.</label></div>
        <button type="submit" style={{opacity: (submitted === null) ? "0.5":"1"}}>Submit</button>
      </form>
     </main>
+   <Reviews/>
    <Footer/>
   </div>
   </>

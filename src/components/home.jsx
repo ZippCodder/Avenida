@@ -1,4 +1,5 @@
 import React from "react";
+import Reviews from "./reviews.jsx";
 import "../../public/styles/home.css";
 import "../../public/styles/styles.css";
 import PhoneFrame from "../../public/images/graphics/phone-frame.png";
@@ -14,7 +15,7 @@ const aboutBackground  = React.useRef(null);
 
 React.useEffect(() => {
   window.addEventListener('scroll', () => {
-   backgroundImages.current.style.top = `${-(window.pageYOffset/20)}%`;
+   backgroundImages.current.style.top = `${-(window.pageYOffset/15)}%`;
    backgroundImages.current.style.opacity = `${1-(window.pageYOffset/700)}`;
    aboutBackground.current.style.transform = `translateY(${-(window.pageYOffset/2)}px)`;
    aboutBackground.current.style.height = `calc(100% + ${(window.pageYOffset/2)}px)`;
@@ -33,6 +34,8 @@ React.useEffect(() => {
      <button className="buttons__button buttons__register-user" onClick={() => window.location="/register"}>Create account<i className="fa-solid fa-circle-user"></i></button>
      <button className="buttons__button buttons__register-business" onClick={() => window.location="/pricing"}>See options<i className="fa-solid fa-briefcase"></i></button>
     </div>
+
+
    </article>
     <div ref={phoneDisplay} className="intro__phone">
      <div className="intro-phone__content .phone__content">
@@ -71,16 +74,6 @@ React.useEffect(() => {
     </div>
     <button className="about__get-started" onClick={() => window.location = "/register"}>Get started!</button>
    </article>
-   <section className="steps">
-    <h1>It's as easy as one, two, three.</h1>
-    <article className="steps__steps">
-    <div>
-     <p className="steps__step"><mark>1</mark> Open your account.</p>
-     <p className="steps__step"><mark>2</mark> Complete your job profile.</p>
-     <p className="steps__step"><mark>3</mark> Start applying hands-free!</p>
-    </div>
-    </article>
-   </section>
    <section className="main__user-features">
     <div className="user-features__feature">
      <i className="fa-solid fa-tags feature__icon"></i>
@@ -162,6 +155,7 @@ React.useEffect(() => {
       <p className="benefit__content">Log into your account portal whenever you need either online or in the app. See the company, date and link to for each completed application and check for requests for additional information. Adjust the status of each application to track your recruitment processes.</p>
      </div> 
    </section>
+   <Reviews/>
  </>
  )
 }
