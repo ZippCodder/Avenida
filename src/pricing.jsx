@@ -43,7 +43,7 @@ function App() {
         <div className="pricing__details">
          <h2 className="pricing__price">{`$${configs[currentConfig].price}`}</h2>
          <h3 className="pricing__name">{["Basic Pack", "Standard Pack", "Advanced Pack"][currentConfig-1]}</h3>
-         <small>{`${configs[currentConfig].dailyAmount*30} Jobs • ${configs[currentConfig].dailyAmount} Jobs Daily • 1 Month`}</small>
+         <small>{`${configs[currentConfig].dailyAmount*30} Jobs | ${configs[currentConfig].dailyAmount} Jobs Daily | 1 Month`}</small>
         </div>
         <p className="pricing__payment-methods"><i className="fa-brands fa-cc-paypal"></i><i className="fa-brands fa-google-pay"></i></p>
         <button className="pricing__button" onClick={() => window.location = "/login"}>Checkout <i className="fa-solid fa-credit-card"></i></button>

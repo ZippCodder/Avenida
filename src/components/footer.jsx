@@ -44,7 +44,7 @@ export default function Footer(props) {
    </div>
    </div>
    <div className="footer__copyright">
-     © 2025 Copyright Centro, All rights reserved.
+     	&copy; 2025 Copyright Centro, All rights reserved.
    </div>
   </footer>
  );

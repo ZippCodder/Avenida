@@ -140,7 +140,7 @@ React.useEffect(() => {
      </div> 
      <div className="business-benefits__benefit">
       <h4 className="benefit__title"><i className="fa-solid fa-arrow-trend-up"></i> Quality over quantity</h4>
-      <p className="benefit__content">Paid professionals search for the jobs that best match your resume and expectations, and tailor each application to the position. Unlike AI job appliers, which submit sub-par applications, apply to irrelevant postings and inflate the applicant pool—lowering the chances for everyone.</p>
+      <p className="benefit__content">Paid professionals search for the jobs that best match your resume and expectations, and tailor each application to the position. Unlike AI job appliers, which submit sub-par applications, apply to irrelevant postings and inflate the applicant pool, lowering the chances for everyone.</p>
      </div> 
      <div className="business-benefits__benefit">
       <h4 className="benefit__title"><i className="fa-solid fa-robot"></i>We don't rely on AI</h4>

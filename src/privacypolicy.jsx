@@ -84,7 +84,7 @@ function App() {
       </p>
      </div>
      <div className="policy__paragraph">
-      <h2 className="policy__paragraph-title">Children’s Privacy </h2>
+      <h2 className="policy__paragraph-title">Privacy for Children </h2>
       <p className="policy__paragraph-content">Our services are not intended for individuals under the age of 16. We do not knowingly collect data from children.
       </p>
      </div>
