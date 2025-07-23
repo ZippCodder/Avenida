@@ -118,6 +118,16 @@ const handlers = {
   res.setHeader("Content-Type", "text/html");
   res.statusCode = 200;
   res.end(file);
+ },"/account": function(req, res) {      
+ log(`request made on /account from ${req.socket.localAddress} ` + Date(Date.now()).toString());
+  try {
+   file = fs.readFileSync(__dirname + "/public/pages/index.html", "utf-8").replace("{title}", "Centro: My Account").replace("{bundle}", "/dist/checkout.bundle.js");
+  } catch (err) {
+   handlers["404"](req, res, "file not found!");
+  }
+  res.setHeader("Content-Type", "text/html");
+  res.statusCode = 200;
+  res.end(file);
  },
  "404": function(req, res, message) {
    res.statusCode = 404; 
